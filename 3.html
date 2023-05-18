@@ -1,0 +1,21 @@
+<script type="text/javascript">
+
+    let no = parseInt(prompt("Enter the number of table: ")); //UI no
+    
+    class Table {
+        constructor(number) { // table nu.
+            this.number = number;
+        }
+
+        Table() {
+            let i = 1;
+            do {
+                console.log(`${this.number} x ${i} = ${this.number * i}`);
+                i++;
+            } while (i <= 10);
+        }
+    }
+
+    let table = new Table(no);
+    table.Table(no);
+</script>

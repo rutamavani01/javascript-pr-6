@@ -1,0 +1,55 @@
+<script type="text/javascript">
+    let physics = parseInt(prompt("Enter the marks of physics: "));
+    let chemistry = parseInt(prompt("Enter the marks of chemistry: "));
+    let biology = parseInt(prompt("Enter the marks of biology: "));
+    let maths = parseInt(prompt("Enter the marks of maths: "));
+    let computer = parseInt(prompt("Enter the marks of computer: "));
+
+    class student {
+
+        constructor(physics, chemistry, biology, maths, computer) {
+            this.physics = physics;
+            this.chemistry = chemistry;
+            this.biology = biology;
+            this.maths = maths;
+            this.computer = computer;
+        }
+
+        percentage() {
+            let total = this.physics +
+                this.chemistry +
+                this.biology +
+                this.maths +
+                this.computer;
+
+            let percentage = (total / 500) * 100;
+            console.log(total);
+        }
+
+        grade() {
+            let percentage = this.percentage();
+            let grade;
+
+            if (percentage >= 90) {
+                grade = "A";
+            } else if (percentage >= 80) {
+                grade = "B";
+            } else if (percentage >= 70) {
+                grade = "C";
+            } else if (percentage >= 60) {
+                grade = "D";
+            } else if (percentage >= 50) {
+                grade = "E";
+            } else {
+                grade = "F";
+            }
+        }
+    }
+
+    let student = new student(physics,chemistry,biology,maths,computer);
+    let percentage = student.percentage();
+    let grade = student.grade();
+
+    console.log(percentage);
+    console.log(grade);
+</script>
